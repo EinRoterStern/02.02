@@ -36,7 +36,7 @@
 
 <form action="/home" method="post">
 
-<p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"></textarea></p>
+<p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"  style = "resize: none";></textarea></p>
 
 <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
 
