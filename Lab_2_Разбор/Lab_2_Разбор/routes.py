@@ -2,17 +2,17 @@
 Routes and views for the bottle application.
 """
 
-from bottle import route, view
+from bottle import route, view, template
 from datetime import datetime
 
 @route('/')
 @route('/home')
 @view('index')
 def home():
-    """Renders the home page."""
-    return dict(
-        year=datetime.now().year
-    )
+    """Renders the home page."""    
+    year=datetime.now().year
+    return template('index.tpl',year=year, message ="Write to us!")
+    
 
 @route('/contact')
 @view('contact')

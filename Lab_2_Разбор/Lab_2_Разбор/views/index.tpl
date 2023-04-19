@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title='Home Page', year=year)
 
+
 <div class="jumbotron">
     <img src="static\images\logo_nav.png">
     <p></p>
@@ -36,10 +37,12 @@
 
 <form action="/home" method="post">
 
-<p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"  style = "resize: none";></textarea></p>
+    <p><input type="text" size='50' name="USERNAME" placeholder="Your name" style="resize:none;"></p> 
 
-<p><input type="text" size="50" name="ADRESS" placeholder="Your il"></p>
+    <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"  style = "resize: none";></textarea></p>
 
-<p><input class="btn btn-default" type="submit" value="Send"></p>
+    <p><input type="text" size="50" name="ADRESS" placeholder="Your il"></p>
 
+    <p><input class="btn btn-default" type="submit" value="Send"></p>
+    <p> {{message}} </p>   
 </form>
