@@ -41,7 +41,7 @@
 
     <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"  style = "resize: none";></textarea></p>
 
-    <p><input type="text" size="50" name="ADRESS" placeholder="Your il"></p>
+    <p><input type="text" size="50" name="ADRESS" placeholder="Your il" style = "resize: none"></p>
 
     <p><input class="btn btn-default" type="submit" value="Send"></p>
     <p> {{message}} </p>   

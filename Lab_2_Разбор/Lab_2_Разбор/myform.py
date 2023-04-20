@@ -11,7 +11,9 @@ def my_form():
     username = request.forms.get('USERNAME')
     question = request.forms.get('QUEST')
 
-    pattern = r"^[-\w\.]+@([-\w]+\.)+[-\w]{2,4}$"
+    pattern = r"^[-\w\.]+@([-\w]+\.)+[-\w]{2,4}$" #r - обратный слеш не будут как спец символы(избегут конфликты символов), ^
+                                                   #- начало строки,-\w\. - могут быть один - несколько символов английского алфавита любого регистра, 
+                                                   #также нижнего подчеркивания и точка, @ - должна быть собака,[-\w]{2,4} - 2-4 символа английского алфавита, $ - конец строки
     #проверяем заполненость полей
     if not username or not mail or not question:     
         return template('index.tpl', message='fields are not filled!', year=datetime.now().year)
