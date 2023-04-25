@@ -2,6 +2,9 @@
 from bottle import post, request,response, template
 from datetime import datetime
 import re
+import pdb
+
+questions = {} #создан словарь
 
 @post('/home', method='post')
 
@@ -23,5 +26,7 @@ def my_form():
         response.status = 400
         return template('index.tpl', message='dont corect email', year=datetime.now().year)
     access_date = datetime.now().strftime("%Y-%m-%d")
+    questions[mail] = question
+    pdb.set_trace()
     #используме форматирование строк
     return "Thanks! {}! The answer will be sent to the mail {}, access Date: {}".format(username, mail, access_date)
