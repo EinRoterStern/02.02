@@ -5,6 +5,7 @@ import re
 import pdb
 import json
 
+
 questions = {} #создан словарь
 
 @post('/home', method='post')
